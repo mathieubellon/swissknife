@@ -2,9 +2,13 @@ package main
 
 import (
 	"encoding/json"
+	"flag"
 	"fmt"
+	"net/http"
 	"os"
 	"time"
+
+	"github.com/PuerkitoBio/goquery"
 )
 
 type Release struct {
@@ -26,7 +30,19 @@ type ModifiedDetectors struct {
 	Specific []string `json:"specific"`
 }
 
+const basepath string = "https://docs.gitguardian.com"
+
 func main() {
+	var versionFlag string
+	flag.StringVar(&versionFlag, "version", "", "Specify the version")
+	flag.Parse()
+
+	if versionFlag == "" {
+		fmt.Println("Version is mandatory ex: -version 2.115.0")
+		return
+	}
+
+	version := versionFlag
 	// Read the JSON file
 	filePath := "/Users/mathieu.bellon/Desktop/tokenscanner/tokenscanner/data/DETECTORS_CHANGELOG.json"
 	fileContent, err := os.ReadFile(filePath)
@@ -44,7 +60,7 @@ func main() {
 	}
 
 	// Retrieve the value at key "2.115.0"
-	value := data["2.114.0"]
+	value := data[version]
 
 	var release Release
 
@@ -60,14 +76,17 @@ func main() {
 		return
 	}
 
-	basepath := "https://docs.gitguardian.com"
-
 	fmt.Println("Added Detectors:")
 	for _, detector := range release.AddedDetectors.Generic {
 		fmt.Printf("[%s](%s/secrets-detection/secrets-detection-engine/detectors/generics/%s)\n", detector, basepath, detector)
 	}
 	for _, detector := range release.AddedDetectors.Specific {
-		fmt.Printf("[%s](%s/secrets-detection/secrets-detection-engine/detectors/specifics/%s)\n", detector, basepath, detector)
+		markdownURL, err := getURL("specifics", detector)
+		if err != nil {
+			fmt.Println("Error getting title:", err)
+			return
+		}
+		fmt.Printf("%s", markdownURL)
 	}
 
 	fmt.Println("Modified Detectors:")
@@ -75,7 +94,12 @@ func main() {
 		fmt.Printf("[%s](%s/secrets-detection/secrets-detection-engine/detectors/generics/%s)\n", detector, basepath, detector)
 	}
 	for _, detector := range release.ModifiedDetectors.Specific {
-		fmt.Printf("[%s](%s/secrets-detection/secrets-detection-engine/detectors/specifics/%s)\n", detector, basepath, detector)
+		markdownURL, err := getURL("specifics", detector)
+		if err != nil {
+			fmt.Println("Error getting title:", err)
+			return
+		}
+		fmt.Printf("%s", markdownURL)
 	}
 
 	fmt.Println("Removed Detectors:")
@@ -85,4 +109,20 @@ func main() {
 	for _, detector := range release.RemovedDetectors.Specific {
 		fmt.Printf("[%s](%s/secrets-detection/secrets-detection-engine/detectors/specifics/%s)\n", detector, basepath, detector)
 	}
+}
+
+func getURL(category string, detector any) (string, error) {
+	resp, err := http.Get(fmt.Sprintf("%s/secrets-detection/secrets-detection-engine/detectors/%s/%s", basepath, category, detector))
+	if err != nil {
+		return "Error during get", err
+	}
+	defer resp.Body.Close()
+
+	doc, err := goquery.NewDocumentFromReader(resp.Body)
+	if err != nil {
+		return "Error during lookup", err
+	}
+	title := doc.Find("#__docusaurus_skipToContent_fallback > div > main > div > div > div > div > article > div.theme-doc-markdown.markdown > div > div.section_AGm0.is--w-border-btm_hYla.is--rte-section > div.rich-text-block_RQVQ.w-richtext > h1").Text()
+	markdown_url := fmt.Sprintf("[%s](%s/secrets-detection/secrets-detection-engine/detectors/%s/%s)\n", title, basepath, category, detector)
+	return markdown_url, nil
 }
