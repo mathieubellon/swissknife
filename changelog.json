@@ -1,0 +1,3316 @@
+{
+  "2.115.0": {
+    "release_date": "2024-06-11T08:24:55+00:00",
+    "added_detectors": {
+      "generic": [],
+      "specific": [
+        "sentry_org_auth_token",
+        "sentry_user_auth_token_v2",
+        "slack_configuration_refresh_token",
+        "slack_configuration_token"
+      ]
+    },
+    "removed_detectors": {
+      "generic": [],
+      "specific": []
+    },
+    "modified_detectors": {
+      "generic": [],
+      "specific": [
+        "packet_api_key",
+        "sentry_token",
+        "signifyd_apikey",
+        "slackbototken",
+        "slackusertoken"
+      ]
+    }
+  },
+  "2.114.0": {
+    "release_date": "2024-05-27T09:53:31+00:00",
+    "added_detectors": {
+      "generic": [],
+      "specific": [
+        "aspnet_decryption_key",
+        "aspnet_validation_key",
+        "langchain_api_key",
+        "openai_project_apikey",
+        "openai_service_account",
+        "sourcegraph_access_token_v1",
+        "sourcegraph_enterprise_subscription_token",
+        "sourcegraph_license_key_token",
+        "sourcegraph_user_gateway_access_token",
+        "wakatime_apikey"
+      ]
+    },
+    "removed_detectors": {
+      "generic": [],
+      "specific": []
+    },
+    "modified_detectors": {
+      "generic": [
+        "generic_database_assignment",
+        "username_password"
+      ],
+      "specific": [
+        "azure_active_directory_api_keys",
+        "base64_midtrans_apikey",
+        "cloudant_iam",
+        "cloudant_keys",
+        "crates_io_key",
+        "facebook_access_token",
+        "facebook_app_keys",
+        "google_recaptcha",
+        "googlecloud",
+        "hubspot_apikey",
+        "ibm_platform_api_key",
+        "midtrans_apikey",
+        "mongo_cli",
+        "mongo_uri",
+        "mssql_assignment",
+        "mssql_assignment_attached_port",
+        "mssql_uri",
+        "mysql_assignment",
+        "mysql_assignment_attached_port",
+        "mysql_cli",
+        "mysql_uri",
+        "notion_integration_token",
+        "nuget_api_key",
+        "nx_cloud_token",
+        "openai_apikey",
+        "oracle_uri",
+        "readme_apikey",
+        "redis_assignment",
+        "redis_cli",
+        "redis_server_password_cli",
+        "redis_uri",
+        "redshift_uri",
+        "vercel_blob_token"
+      ]
+    }
+  },
+  "2.113.0": {
+    "release_date": "2024-05-13T17:12:45+00:00",
+    "added_detectors": {
+      "generic": [],
+      "specific": [
+        "nylas_api_key",
+        "sourcegraph_access_token_v3"
+      ]
+    },
+    "removed_detectors": {
+      "generic": [],
+      "specific": []
+    },
+    "modified_detectors": {
+      "generic": [
+        "base64_generic_high_entropy_secret",
+        "generic_database_assignment",
+        "generic_high_entropy_secret"
+      ],
+      "specific": [
+        "sourcegraph_token"
+      ]
+    }
+  },
+  "2.112.0": {
+    "release_date": "2024-04-29T11:40:47+00:00",
+    "added_detectors": {
+      "generic": [],
+      "specific": [
+        "duplocloud_apikey",
+        "fernet_key",
+        "vercel_blob_token"
+      ]
+    },
+    "removed_detectors": {
+      "generic": [],
+      "specific": []
+    },
+    "modified_detectors": {
+      "generic": [],
+      "specific": [
+        "base64_private_key_dsa",
+        "base64_private_key_elliptic",
+        "base64_private_key_encrypted",
+        "base64_private_key_generic",
+        "base64_private_key_openssh",
+        "base64_private_key_pgp",
+        "base64_private_key_rsa",
+        "google_bard_api_key"
+      ]
+    }
+  },
+  "2.111.0": {
+    "release_date": "2024-04-15T15:43:05+00:00",
+    "added_detectors": {
+      "generic": [],
+      "specific": [
+        "grafana_cloud_api_key",
+        "groq_api_key",
+        "nx_cloud_token"
+      ]
+    },
+    "removed_detectors": {
+      "generic": [],
+      "specific": []
+    },
+    "modified_detectors": {
+      "generic": [
+        "base64_generic_high_entropy_secret",
+        "basic_auth_string",
+        "generic_high_entropy_secret"
+      ],
+      "specific": []
+    }
+  },
+  "2.110.0": {
+    "release_date": "2024-04-02T14:20:33+00:00",
+    "added_detectors": {
+      "generic": [],
+      "specific": [
+        "base64_midtrans_apikey",
+        "dropbox_token_v2",
+        "midtrans_apikey",
+        "sanity_token",
+        "zuplo_apikey"
+      ]
+    },
+    "removed_detectors": {
+      "generic": [],
+      "specific": []
+    },
+    "modified_detectors": {
+      "generic": [],
+      "specific": [
+        "airtable_apikey",
+        "artifactory_access_token",
+        "dropbox_token",
+        "gocardless_api",
+        "google_recaptcha",
+        "mailchimp_basic_auth",
+        "plivo_server_tokens",
+        "razorpay_apikey",
+        "twilio_api_keys",
+        "twilio_basic_auth",
+        "wechat_keys",
+        "xray_access_token"
+      ]
+    }
+  },
+  "2.109.0": {
+    "release_date": "2024-03-18T13:35:26+00:00",
+    "added_detectors": {
+      "generic": [],
+      "specific": [
+        "azure_open_ai_api_key",
+        "kubernetes_docker_secret"
+      ]
+    },
+    "removed_detectors": {
+      "generic": [],
+      "specific": []
+    },
+    "modified_detectors": {
+      "generic": [
+        "base64_generic_high_entropy_secret",
+        "generic_high_entropy_secret"
+      ],
+      "specific": [
+        "gitlab_token",
+        "googleaiza",
+        "okta_keys",
+        "slackbototken"
+      ]
+    }
+  },
+  "2.108.0": {
+    "release_date": "2024-03-04T16:36:40+00:00",
+    "added_detectors": {
+      "generic": [],
+      "specific": [
+        "snowpark_api_credentials"
+      ]
+    },
+    "removed_detectors": {
+      "generic": [],
+      "specific": []
+    },
+    "modified_detectors": {
+      "generic": [
+        "bearer_token",
+        "generic_high_entropy_secret",
+        "generic_password",
+        "generic_terraform_variable"
+      ],
+      "specific": []
+    }
+  },
+  "2.107.0": {
+    "release_date": "2024-02-21T18:06:29+00:00",
+    "added_detectors": {
+      "generic": [],
+      "specific": [
+        "replicate_user_access_token",
+        "workato_api_key"
+      ]
+    },
+    "removed_detectors": {
+      "generic": [],
+      "specific": []
+    },
+    "modified_detectors": {
+      "generic": [
+        "generic_high_entropy_secret"
+      ],
+      "specific": []
+    }
+  },
+  "2.106.0": {
+    "release_date": "2024-02-08T14:31:41+00:00",
+    "added_detectors": {
+      "generic": [],
+      "specific": []
+    },
+    "removed_detectors": {
+      "generic": [],
+      "specific": []
+    },
+    "modified_detectors": {
+      "generic": [
+        "base64_generic_high_entropy_secret",
+        "generic_high_entropy_secret",
+        "generic_password"
+      ],
+      "specific": []
+    }
+  },
+  "2.105.0": {
+    "release_date": "2024-01-23T16:01:20+00:00",
+    "added_detectors": {
+      "generic": [],
+      "specific": [
+        "square_token_v2"
+      ]
+    },
+    "removed_detectors": {
+      "generic": [],
+      "specific": []
+    },
+    "modified_detectors": {
+      "generic": [
+        "base64_generic_high_entropy_secret"
+      ],
+      "specific": [
+        "clarifai_v2",
+        "claude_api_key",
+        "cohere_apikey",
+        "google_bard_api_key",
+        "hugging_face_user_access_token",
+        "openai_apikey",
+        "pinecone_api_key",
+        "pinecone_api_keys"
+      ]
+    }
+  },
+  "2.104.0": {
+    "release_date": "2024-01-09T10:05:16+00:00",
+    "added_detectors": {
+      "generic": [],
+      "specific": [
+        "bunny_net_api_key",
+        "hugging_face_user_access_token"
+      ]
+    },
+    "removed_detectors": {
+      "generic": [],
+      "specific": []
+    },
+    "modified_detectors": {
+      "generic": [
+        "base64_generic_high_entropy_secret",
+        "generic_password",
+        "username_password"
+      ],
+      "specific": [
+        "beamer_apikey",
+        "googlecloud",
+        "nuget_api_key",
+        "paypal_oauth2",
+        "twitter_tokens"
+      ]
+    }
+  },
+  "2.103.0": {
+    "release_date": "2023-12-14T12:14:35+00:00",
+    "added_detectors": {
+      "generic": [],
+      "specific": [
+        "circleci_project_token",
+        "claude_api_key",
+        "grafana_service_account_token_with_host",
+        "klaviyo_api_key"
+      ]
+    },
+    "removed_detectors": {
+      "generic": [],
+      "specific": []
+    },
+    "modified_detectors": {
+      "generic": [
+        "generic_high_entropy_secret"
+      ],
+      "specific": [
+        "circleci_personal_token",
+        "heroku_token",
+        "secret_key_in_django_config"
+      ]
+    }
+  },
+  "2.102.0": {
+    "release_date": "2023-11-27T09:30:06+00:00",
+    "added_detectors": {
+      "generic": [],
+      "specific": [
+        "base64_aws_iam",
+        "base64_aws_ses_keys",
+        "readme_apikey",
+        "scalr_api_access_token",
+        "tailscale_api_key",
+        "tailscale_oauth_key",
+        "tailscale_pre_auth_key",
+        "tailscale_scim_key",
+        "tailscale_webhook_key"
+      ]
+    },
+    "removed_detectors": {
+      "generic": [],
+      "specific": []
+    },
+    "modified_detectors": {
+      "generic": [],
+      "specific": [
+        "google_bard_api_key",
+        "vercel_api_access_token",
+        "zoom_api_jwt",
+        "zoom_api_jwt_keys"
+      ]
+    }
+  },
+  "2.101.0": {
+    "release_date": "2023-11-13T11:04:46+00:00",
+    "added_detectors": {
+      "generic": [],
+      "specific": [
+        "airtable_apikey_v2"
+      ]
+    },
+    "removed_detectors": {
+      "generic": [],
+      "specific": []
+    },
+    "modified_detectors": {
+      "generic": [
+        "generic_high_entropy_secret"
+      ],
+      "specific": [
+        "github_app_keys"
+      ]
+    }
+  },
+  "2.100.0": {
+    "release_date": "2023-10-25T16:13:24+00:00",
+    "added_detectors": [
+      "cohere_apikey",
+      "sourcegraph_token"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.99.1": {
+    "release_date": "2023-10-19T17:32:45+02:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.99.0": {
+    "release_date": "2023-10-13T13:48:03+00:00",
+    "added_detectors": [
+      "google_bard_api_key",
+      "webflow_api_token"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.98.0": {
+    "release_date": "2023-09-15T13:22:42+00:00",
+    "added_detectors": [
+      "aiven_api_key",
+      "infracost_api_key",
+      "rollbar_api_token",
+      "vercel_api_access_token"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.97.0": {
+    "release_date": "2023-08-18T09:39:18+02:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.96.0": {
+    "release_date": "2023-08-04T16:30:43+00:00",
+    "added_detectors": [
+      "carto_jwt",
+      "generic_terraform_variable"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.95.0": {
+    "release_date": "2023-07-20T12:12:32+02:00",
+    "added_detectors": [
+      "databricks_token_with_hostname",
+      "hashicorp_vault_token"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.94.0": {
+    "release_date": "2023-07-05T14:54:41+00:00",
+    "added_detectors": [
+      "azure_active_directory_api_keys",
+      "docusign_api_key",
+      "pinecone_api_key",
+      "pinecone_api_keys"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.93.0": {
+    "release_date": "2023-06-27T15:46:44+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.92.0": {
+    "release_date": "2023-06-13T08:42:51+00:00",
+    "added_detectors": [
+      "aws_ses_keys",
+      "forestadmin_api_key"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.91.0": {
+    "release_date": "2023-05-25T15:05:44+00:00",
+    "added_detectors": [
+      "tableau_pat",
+      "yelp_api_key"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.90.0": {
+    "release_date": "2023-05-11T12:00:10+02:00",
+    "added_detectors": [
+      "figma_personal_access_token",
+      "ldap_credentials_assignment_with_dn",
+      "palantir_jwt"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.89.0": {
+    "release_date": "2023-04-13T16:45:44+02:00",
+    "added_detectors": [
+      "azure_cosmosdb_assignment",
+      "digitalocean_oauth_application_token_v1",
+      "digitalocean_personal_token_v1",
+      "digitalocean_refresh_token_v1",
+      "redis_server_password_cli"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.88.0": {
+    "release_date": "2023-03-31T12:05:46+02:00",
+    "added_detectors": [
+      "cloudinary_api_key_config",
+      "cloudinary_api_key_url",
+      "mongodb_atlas_keys"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.87.0": {
+    "release_date": "2023-03-20T12:46:59+01:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.86.0": {
+    "release_date": "2023-03-01T11:30:48+01:00",
+    "added_detectors": [
+      "keycloak_api_keys"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.85.0": {
+    "release_date": "2023-02-08T17:28:13+01:00",
+    "added_detectors": [
+      "pingdom_token_v3"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.84.1": {
+    "release_date": "2023-01-25T17:27:49+01:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.84.0": {
+    "release_date": "2023-01-18T14:18:13+00:00",
+    "added_detectors": [
+      "docker_credentials",
+      "duo_keys",
+      "lacework_api_keys_with_account",
+      "lacework_api_keys_with_url"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.83.0": {
+    "release_date": "2023-01-09T16:00:30+00:00",
+    "added_detectors": [
+      "shopify_generic_app_token_subdomain"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.82.0": {
+    "release_date": "2022-12-16T16:51:09+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.81.0": {
+    "release_date": "2022-11-28T10:34:31+01:00",
+    "added_detectors": [
+      "sonarqube_token_prefixed",
+      "sonarqube_token_prefixed_with_host"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.80.0": {
+    "release_date": "2022-11-18T09:31:00+00:00",
+    "added_detectors": [
+      "github_fine_grained_pat"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.79.1": {
+    "release_date": "2022-11-03T15:35:01+01:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.79.0": {
+    "release_date": "2022-11-02T10:34:28+01:00",
+    "added_detectors": [
+      "neo4j_credentials_assignment",
+      "neo4j_credentials_assignment_attached_port",
+      "octopus_api_key",
+      "thycotic_credentials_assignment"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.78.0": {
+    "release_date": "2022-10-14T17:39:56+02:00",
+    "added_detectors": [
+      "chief_app_key"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.77.0": {
+    "release_date": "2022-09-27T11:53:50+00:00",
+    "added_detectors": [],
+    "removed_detectors": [
+      "sendinblue_v2"
+    ],
+    "modified_detectors": []
+  },
+  "2.76.0": {
+    "release_date": "2022-09-19T15:26:11+02:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.75.0": {
+    "release_date": "2022-09-05T17:08:38+02:00",
+    "added_detectors": [
+      "pubnub_publish_subscription_keys"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.74.0": {
+    "release_date": "2022-08-19T15:19:46+02:00",
+    "added_detectors": [
+      "base64_generic_high_entropy_secret"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.73.0": {
+    "release_date": "2022-07-15T12:01:32+00:00",
+    "added_detectors": [
+      "customer_io_app_keys",
+      "customer_io_track_encoded_keys",
+      "customer_io_track_keys",
+      "grafana_service_account_token"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.72.0": {
+    "release_date": "2022-07-04T16:28:54+02:00",
+    "added_detectors": [
+      "webex_app_keys"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.71.0": {
+    "release_date": "2022-06-17T14:26:57+00:00",
+    "added_detectors": [
+      "alchemy_apikey",
+      "typeform_api_token"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.70.0": {
+    "release_date": "2022-06-01T18:30:43+02:00",
+    "added_detectors": [
+      "yousign_api_key"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.69.0": {
+    "release_date": "2022-05-20T14:02:51+02:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.68.0": {
+    "release_date": "2022-05-09T11:38:02+00:00",
+    "added_detectors": [
+      "discord_oauth2",
+      "linkedin_oauth2"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.67.0": {
+    "release_date": "2022-04-22T14:10:22+00:00",
+    "added_detectors": [
+      "notion_integration_token"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.66.0": {
+    "release_date": "2022-04-08T18:44:59+02:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.65.0": {
+    "release_date": "2022-03-22T14:56:11+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.64.0": {
+    "release_date": "2022-03-14T18:57:26+01:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.63.0": {
+    "release_date": "2022-02-23T15:16:21+01:00",
+    "added_detectors": [
+      "freshdesk_messaging_token",
+      "trendmicro_cloudone_apikey_v1",
+      "trendmicro_cloudone_apikey_v2",
+      "trendmicro_conformity_legacy_apikey"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.62.0": {
+    "release_date": "2022-02-11T10:45:57+00:00",
+    "added_detectors": [
+      "freshdesk_api_token_with_domain",
+      "freshdesk_api_token_with_url"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.61.0": {
+    "release_date": "2022-01-27T18:10:47+00:00",
+    "added_detectors": [
+      "hashicorp_vault_unseal_key",
+      "shippo_api_token"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.60.0": {
+    "release_date": "2022-01-17T11:07:30+01:00",
+    "added_detectors": [
+      "easypost_api_key",
+      "ibm_cos_hmac_credentials"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.59.0": {
+    "release_date": "2022-01-03T10:19:13+01:00",
+    "added_detectors": [
+      "digitalocean_oauth_application_keys",
+      "paypal_oauth2_base64",
+      "twitch_api_keys",
+      "twitch_app_credentials"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.58.0": {
+    "release_date": "2021-12-16T16:38:47+00:00",
+    "added_detectors": [
+      "planetscale_database_password_with_host_and_username"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.57.0": {
+    "release_date": "2021-12-03T16:58:50+00:00",
+    "added_detectors": [
+      "authentication_tuple",
+      "contribsys_faktory_password",
+      "contribsys_sidekiq_apikey",
+      "docker_swarm_join_token",
+      "docker_swarm_unlock_key",
+      "signifyd_apikey",
+      "yandex_predictor_api_key"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.56.0": {
+    "release_date": "2021-11-22T17:00:58+01:00",
+    "added_detectors": [
+      "fullstory_api_key",
+      "google_oauth2_prefixed"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.55.0": {
+    "release_date": "2021-11-08T16:00:09+01:00",
+    "added_detectors": [
+      "gitlab_personal_token_v2",
+      "ms_teams_webhook"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.54.0": {
+    "release_date": "2021-10-22T11:30:36+02:00",
+    "added_detectors": [
+      "aws_iam_sts",
+      "gitguardian_test_token_checked",
+      "zoom_api_jwt",
+      "zoom_api_jwt_keys",
+      "zoom_api_keys",
+      "zoom_sdk_keys"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.53.0": {
+    "release_date": "2021-10-11T10:57:45+02:00",
+    "added_detectors": [
+      "gemfury_deploy_or_push_token",
+      "gemfury_full_access_token",
+      "gitguardian_gpm_api_key",
+      "npm_token_prefixed",
+      "packagecloud_api_token",
+      "shopify_generic_app_token",
+      "shopify_private_app_token",
+      "slack_signing_secret",
+      "supabase_jwt_secret",
+      "supabase_service_role_jwt"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.52.1": {
+    "release_date": "2021-09-28T14:36:59+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.52.0": {
+    "release_date": "2021-09-28T12:51:49+00:00",
+    "added_detectors": [
+      "gemstash_apikey",
+      "gitguardian_onboarding_token",
+      "slack_app_token"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.51.0": {
+    "release_date": "2021-09-13T09:26:01+00:00",
+    "added_detectors": [
+      "checkout_sandbox_secret_key",
+      "checkout_secret_key",
+      "coveralls_personal_token",
+      "planetscale_database_password",
+      "planetscale_oauth_token",
+      "planetscale_service_token",
+      "samsara_apikey_v1",
+      "samsara_apikey_v2"
+    ],
+    "removed_detectors": [
+      "detectors_groups"
+    ],
+    "modified_detectors": []
+  },
+  "2.50.0": {
+    "release_date": "2021-08-30T12:13:53+00:00",
+    "added_detectors": [
+      "amqp_assignment",
+      "amqp_assignment_attached_port",
+      "generic_cli_option_secret",
+      "ionic_personal_access_token",
+      "line_messaging_oauth2",
+      "line_notify_token",
+      "linear_api_key",
+      "linear_oauth2",
+      "mandrill_apikey",
+      "pulumi_access_token"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.49.0": {
+    "release_date": "2021-08-18T08:25:09+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.48.0": {
+    "release_date": "2021-08-02T09:10:03+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.47.0": {
+    "release_date": "2021-07-19T16:04:44+00:00",
+    "added_detectors": [
+      "xray_access_token"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.46.2": {
+    "release_date": "2021-07-07T13:02:24+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.46.1": {
+    "release_date": "2021-07-05T16:47:28+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.46.0": {
+    "release_date": "2021-07-05T08:28:52+00:00",
+    "added_detectors": [
+      "adobe_api_keys",
+      "artifactory_access_token",
+      "buildkite_agent_token",
+      "buildkite_api_token",
+      "openai_apikey",
+      "rubygems_saas_apikey",
+      "sonarqube_token"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.45.0": {
+    "release_date": "2021-06-21T11:41:05+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.44.0": {
+    "release_date": "2021-06-07T08:16:57+00:00",
+    "added_detectors": [
+      "agora_api_keys",
+      "launch_darkly_personal_token",
+      "launch_darkly_sdk_key"
+    ],
+    "removed_detectors": [
+      "paymill"
+    ],
+    "modified_detectors": []
+  },
+  "2.43.0": {
+    "release_date": "2021-05-25T13:47:52+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.42.0": {
+    "release_date": "2021-05-10T09:03:03+00:00",
+    "added_detectors": [
+      "coveralls_token",
+      "detectors_groups",
+      "dynatrace_token_v2",
+      "gitguardian_incident_token"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.41.1": {
+    "release_date": "2021-04-29T15:55:12+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.41.0": {
+    "release_date": "2021-04-26T09:17:30+00:00",
+    "added_detectors": [
+      "github_oauth_access_token_v2",
+      "github_personal_access_token_v2",
+      "github_server_to_server_token_v2",
+      "github_user_to_server_token_v2",
+      "ibm_api_connect_credentials"
+    ],
+    "removed_detectors": [
+      "ibm api id secret"
+    ],
+    "modified_detectors": []
+  },
+  "2.40.0": {
+    "release_date": "2021-04-13T17:01:32+00:00",
+    "added_detectors": [
+      "square_credentials",
+      "stripe_webhook_secret"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.39.0": {
+    "release_date": "2021-03-29T09:45:34+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.38.0": {
+    "release_date": "2021-03-15T13:12:50+00:00",
+    "added_detectors": [
+      "azure_service_management_certificate",
+      "username_password"
+    ],
+    "removed_detectors": [
+      "talend_personal_access_token"
+    ],
+    "modified_detectors": []
+  },
+  "2.37.1": {
+    "release_date": "2021-03-01T13:57:22+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.37.0": {
+    "release_date": "2021-03-01T13:21:47+00:00",
+    "added_detectors": [
+      "generic_password"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.36.1": {
+    "release_date": "2021-02-18T09:39:07+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.36.0": {
+    "release_date": "2021-02-17T17:01:17+00:00",
+    "added_detectors": [
+      "azure_devops_personal_access_token"
+    ],
+    "removed_detectors": [
+      "algolia_search",
+      "bitcoin_wallet_address",
+      "bitstamp_keys",
+      "bittrex_keys",
+      "cex_keys",
+      "freshdesk_api_key",
+      "instagram_oauth2",
+      "poloniex_keys",
+      "rackspace_api_key",
+      "salesloft_apikey",
+      "sentrydsn",
+      "uber_oauth2"
+    ],
+    "modified_detectors": []
+  },
+  "2.35.0": {
+    "release_date": "2021-02-01T09:25:54+00:00",
+    "added_detectors": [
+      "azure_subscription_key",
+      "cloudflare_api_token",
+      "discord_bot_token",
+      "mongo_cli",
+      "paystack_key"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.34.1": {
+    "release_date": "2021-01-18T11:16:30+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.34.0": {
+    "release_date": "2021-01-18T09:19:25+00:00",
+    "added_detectors": [
+      "codacy_api_token",
+      "codacy_project_token",
+      "codecov_api_key",
+      "doppler_apikey",
+      "saucelabs_keys",
+      "surge_token"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.33.2": {
+    "release_date": "2021-01-11T11:04:45+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.33.1": {
+    "release_date": "2021-01-08T09:49:39+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.33.0": {
+    "release_date": "2020-12-22T17:29:22+00:00",
+    "added_detectors": [
+      "beamer_apikey",
+      "segment_workspace_key",
+      "talend_personal_access_token"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.32.0": {
+    "release_date": "2020-12-07T10:17:21+00:00",
+    "added_detectors": [
+      "postgres_pgpass",
+      "redshift_uri",
+      "solr_uri"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.31.0": {
+    "release_date": "2020-11-23T11:19:05+00:00",
+    "added_detectors": [
+      "dropbox_app_credentials"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.30.0": {
+    "release_date": "2020-11-09T10:59:01+00:00",
+    "added_detectors": [
+      "mysql_cli",
+      "postgres_cli",
+      "redis_cli",
+      "slack_app_keys"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.29.0": {
+    "release_date": "2020-10-23T15:12:29+00:00",
+    "added_detectors": [
+      "clojars_key",
+      "fcm_api_key",
+      "finicity_auth_keys",
+      "gitlab_token",
+      "ldap_credentials_assignment"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.28.0": {
+    "release_date": "2020-10-09T11:36:07+00:00",
+    "added_detectors": [
+      "algolia_custom_permissions",
+      "company_email_password",
+      "generic_database_assignment",
+      "generic_database_assignment_attached_port",
+      "gitlab_enterprise_personal_token"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.27.0": {
+    "release_date": "2020-09-25T12:50:14+00:00",
+    "added_detectors": [
+      "github_enterprise_token",
+      "shopify_private_v2"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.26.1": {
+    "release_date": "2020-09-10T17:52:46+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.26.0": {
+    "release_date": "2020-09-10T16:24:06+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.25.0": {
+    "release_date": "2020-08-28T13:13:38+00:00",
+    "added_detectors": [
+      "github_oauth_app_keys",
+      "sslmate_api_key"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.24.0": {
+    "release_date": "2020-08-23T14:50:44+00:00",
+    "added_detectors": [
+      "adafruit_io_apikey",
+      "cloudant_iam",
+      "crates_io_key",
+      "frame_io_token",
+      "ftp_credentials_assignment",
+      "messagebird_key"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.23.1": {
+    "release_date": "2020-08-05T08:49:28+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.23.0": {
+    "release_date": "2020-08-03T12:19:02+00:00",
+    "added_detectors": [
+      "generic_high_entropy_secret",
+      "putty_private_key"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.22.0": {
+    "release_date": "2020-07-17T12:24:23+00:00",
+    "added_detectors": [
+      "circleci_personal_token",
+      "confluent_api_keys",
+      "huawei_open_platform_keys",
+      "pushbullet_api_key"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.21.0": {
+    "release_date": "2020-07-02T17:18:52+00:00",
+    "added_detectors": [
+      "airtable_apikey",
+      "gocardless_api",
+      "nuget_api_key"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.20.1": {
+    "release_date": "2020-06-24T12:05:23+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.20.0": {
+    "release_date": "2020-06-19T13:02:49+00:00",
+    "added_detectors": [
+      "snowflake_uri"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.19.1": {
+    "release_date": "2020-06-09T10:41:31+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.19.0": {
+    "release_date": "2020-06-05T08:38:54+00:00",
+    "added_detectors": [
+      "base64_basic_auth"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.18.1": {
+    "release_date": "2020-05-26T15:45:55+00:00",
+    "added_detectors": [
+      "gitguardian_test_token"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.18.0": {
+    "release_date": "2020-05-25T13:31:00+00:00",
+    "added_detectors": [
+      "db2_assignment",
+      "db2_assignment_attached_port",
+      "db2_uri",
+      "mariadb_assignment",
+      "mariadb_assignment_attached_port",
+      "mssql_assignment_attached_port",
+      "mysql_assignment_attached_port",
+      "postgres_assignment_attached_port"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.17.1": {
+    "release_date": "2020-05-12T08:12:56+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.17.0": {
+    "release_date": "2020-05-11T17:13:44+00:00",
+    "added_detectors": [
+      "bitbucket_keys",
+      "bitbucket_keys_basic_auth",
+      "cloudera_model_key",
+      "dynatrace_token",
+      "python_package_index_key",
+      "redis_assignment",
+      "snyk_key",
+      "wechat_keys"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.16.0": {
+    "release_date": "2020-04-24T14:23:36+00:00",
+    "added_detectors": [
+      "bearer_token",
+      "databricks_token",
+      "gitguardian_prm_key",
+      "pingidentity_keys",
+      "plaid_access_token",
+      "plaid_keys",
+      "rails_secret_key_base_master_key",
+      "rails_secret_key_base_var",
+      "sumologic_keys"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.15.2": {
+    "release_date": "2020-04-18T13:31:34+00:00",
+    "added_detectors": [
+      "splunk_token",
+      "splunk_user_seed"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.15.1": {
+    "release_date": "2020-04-16T07:09:33+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.15.0": {
+    "release_date": "2020-04-10T20:57:07+02:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.14.9": {
+    "release_date": "2020-04-09T14:39:50+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.14.8": {
+    "release_date": "2020-04-07T20:12:20+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.14.7": {
+    "release_date": "2020-04-07T16:06:55+00:00",
+    "added_detectors": [
+      "wepay_token"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.14.6": {
+    "release_date": "2020-04-06T15:18:23+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.14.5": {
+    "release_date": "2020-04-03T11:12:16+00:00",
+    "added_detectors": [
+      "ssh_password_assignment"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.14.4": {
+    "release_date": "2020-04-02T16:15:02+00:00",
+    "added_detectors": [
+      "rapidapi_key"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.14.3": {
+    "release_date": "2020-04-01T09:47:23+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.14.2": {
+    "release_date": "2020-03-31T07:48:36+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.14.1": {
+    "release_date": "2020-03-30T11:31:41+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.14.0": {
+    "release_date": "2020-03-27T17:38:11+01:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.13.12": {
+    "release_date": "2020-03-27T16:36:05+00:00",
+    "added_detectors": [
+      "base64_private_key_dsa",
+      "base64_private_key_elliptic",
+      "base64_private_key_encrypted",
+      "base64_private_key_generic",
+      "base64_private_key_openssh",
+      "base64_private_key_pgp",
+      "base64_private_key_rsa"
+    ],
+    "removed_detectors": [
+      "base64_rsa_private_key"
+    ],
+    "modified_detectors": []
+  },
+  "2.13.11": {
+    "release_date": "2020-03-26T15:23:39+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.13.10": {
+    "release_date": "2020-03-26T14:21:24+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.13.9": {
+    "release_date": "2020-03-26T14:09:29+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.13.8": {
+    "release_date": "2020-03-26T11:08:26+00:00",
+    "added_detectors": [
+      "secret_key_in_django_config"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.13.7": {
+    "release_date": "2020-03-24T17:00:24+00:00",
+    "added_detectors": [
+      "mattermost_personal_token"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.13.6": {
+    "release_date": "2020-03-21T10:15:57+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.13.5": {
+    "release_date": "2020-03-19T17:49:07+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.13.4": {
+    "release_date": "2020-03-19T16:25:43+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.13.3": {
+    "release_date": "2020-03-19T14:26:25+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.13.2": {
+    "release_date": "2020-03-19T13:09:37+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.13.1": {
+    "release_date": "2020-03-19T09:39:08+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.13.0": {
+    "release_date": "2020-03-13T09:24:40+01:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.12.10": {
+    "release_date": "2020-03-12T18:33:12+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.12.9": {
+    "release_date": "2020-03-12T11:23:28+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.12.8": {
+    "release_date": "2020-03-12T10:37:14+00:00",
+    "added_detectors": [
+      "stream_keys"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.12.7": {
+    "release_date": "2020-03-11T16:56:50+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.12.6": {
+    "release_date": "2020-03-11T00:03:57+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.12.5": {
+    "release_date": "2020-03-10T18:24:57+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.12.4": {
+    "release_date": "2020-03-10T13:11:53+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.12.3": {
+    "release_date": "2020-03-05T11:41:48+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.12.2": {
+    "release_date": "2020-03-05T11:28:34+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.12.1": {
+    "release_date": "2020-03-04T14:05:28+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.12.0": {
+    "release_date": "2020-03-03T17:59:01+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.11.11": {
+    "release_date": "2020-03-03T17:21:26+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.11.10": {
+    "release_date": "2020-02-28T15:44:27+00:00",
+    "added_detectors": [
+      "npm_token"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.11.9": {
+    "release_date": "2020-02-28T05:59:42+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.11.8": {
+    "release_date": "2020-02-26T14:48:23+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.11.7": {
+    "release_date": "2020-02-25T04:58:20+00:00",
+    "added_detectors": [
+      "pubnub_publish_key",
+      "pubnub_secret_key",
+      "pubnub_subscription_key"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.11.6": {
+    "release_date": "2020-02-20T17:15:17+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.11.5": {
+    "release_date": "2020-02-19T16:59:01+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.11.4": {
+    "release_date": "2020-02-19T15:15:50+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.11.3": {
+    "release_date": "2020-02-18T11:36:30+00:00",
+    "added_detectors": [
+      "auth0_keys"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.11.2": {
+    "release_date": "2020-02-18T11:03:56+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.11.1": {
+    "release_date": "2020-02-18T10:34:20+00:00",
+    "added_detectors": [
+      "ubidots_token"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.11.0": {
+    "release_date": "2020-02-14T14:20:42+01:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.10.5": {
+    "release_date": "2020-02-14T09:36:48+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.10.4": {
+    "release_date": "2020-02-13T18:01:42+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.10.3": {
+    "release_date": "2020-02-13T13:36:43+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.10.2": {
+    "release_date": "2020-02-13T13:14:54+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.10.1": {
+    "release_date": "2020-02-12T10:11:06+00:00",
+    "added_detectors": [
+      "atlassian_oauth2"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.10.0": {
+    "release_date": "2020-02-04T18:09:34+01:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.9.12": {
+    "release_date": "2020-02-04T16:49:10+00:00",
+    "added_detectors": [
+      "jira_token"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.9.11": {
+    "release_date": "2020-02-03T23:25:42+00:00",
+    "added_detectors": [
+      "zendesk_token_full_domain"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.9.10": {
+    "release_date": "2020-02-03T15:53:59+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.9.9": {
+    "release_date": "2020-01-30T10:34:09+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.9.8": {
+    "release_date": "2020-01-30T10:26:45+00:00",
+    "added_detectors": [
+      "pusher_channels_keys"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.9.7": {
+    "release_date": "2020-01-30T10:20:18+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.9.6": {
+    "release_date": "2020-01-28T18:01:46+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.9.5": {
+    "release_date": "2020-01-28T11:16:07+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.9.4": {
+    "release_date": "2020-01-24T15:42:34+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.9.3": {
+    "release_date": "2020-01-24T10:50:19+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.9.2": {
+    "release_date": "2020-01-23T16:51:30+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.9.1": {
+    "release_date": "2020-01-23T13:36:35+00:00",
+    "added_detectors": [
+      "cloudant_keys"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.9.0": {
+    "release_date": "2020-01-22T09:22:03+01:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.8.15": {
+    "release_date": "2020-01-21T23:40:16+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.8.14": {
+    "release_date": "2020-01-20T16:27:41+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.8.13": {
+    "release_date": "2020-01-17T13:57:05+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.8.12": {
+    "release_date": "2020-01-17T13:05:11+00:00",
+    "added_detectors": [
+      "travis_token"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.8.11": {
+    "release_date": "2020-01-17T10:29:24+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.8.10": {
+    "release_date": "2020-01-16T19:35:43+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.8.9": {
+    "release_date": "2020-01-16T12:25:09+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.8.8": {
+    "release_date": "2020-01-16T10:36:10+00:00",
+    "added_detectors": [
+      "jira_basic_auth"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.8.7": {
+    "release_date": "2020-01-13T19:15:58+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.8.6": {
+    "release_date": "2020-01-10T16:20:22+00:00",
+    "added_detectors": [
+      "visa_basic_auth"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.8.5": {
+    "release_date": "2020-01-10T15:18:17+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.8.4": {
+    "release_date": "2020-01-10T13:00:31+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.8.3": {
+    "release_date": "2020-01-08T16:42:17+00:00",
+    "added_detectors": [
+      "contentful_delivery_apikey"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.8.2": {
+    "release_date": "2020-01-06T15:48:58+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.8.1": {
+    "release_date": "2020-01-03T16:38:05+00:00",
+    "added_detectors": [
+      "contentful_management_apikey"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.8.0": {
+    "release_date": "2020-01-02T14:00:28+01:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.7.15": {
+    "release_date": "2019-12-24T16:08:56+00:00",
+    "added_detectors": [
+      "riot_games_apikey"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.7.14": {
+    "release_date": "2019-12-24T15:58:13+00:00",
+    "added_detectors": [
+      "razorpay_apikey"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.7.13": {
+    "release_date": "2019-12-24T15:50:09+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.7.12": {
+    "release_date": "2019-12-24T15:31:21+00:00",
+    "added_detectors": [
+      "mailgun_smtp_password"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.7.11": {
+    "release_date": "2019-12-24T15:22:13+00:00",
+    "added_detectors": [
+      "heartland_apikey"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.7.10": {
+    "release_date": "2019-12-24T10:04:48+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.7.9": {
+    "release_date": "2019-12-23T15:26:47+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.7.8": {
+    "release_date": "2019-12-23T10:27:31+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.7.7": {
+    "release_date": "2019-12-19T15:49:24+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.7.6": {
+    "release_date": "2019-12-19T11:42:56+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.7.5": {
+    "release_date": "2019-12-18T09:23:34+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.7.4": {
+    "release_date": "2019-12-16T17:43:43+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.7.3": {
+    "release_date": "2019-12-16T17:13:46+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.7.2": {
+    "release_date": "2019-12-16T16:53:30+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.7.1": {
+    "release_date": "2019-12-13T19:31:36+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.7.0": {
+    "release_date": "2019-12-13T16:01:03+01:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.6.14": {
+    "release_date": "2019-12-13T14:24:14+00:00",
+    "added_detectors": [
+      "newrelic_admin_key_prefixed",
+      "newrelic_api_key_prefixed",
+      "newrelic_api_service_key",
+      "newrelic_apm_license_key",
+      "newrelic_insights_insert_key_prefixed",
+      "newrelic_insights_query_key",
+      "newrelic_synthetics_key"
+    ],
+    "removed_detectors": [
+      "newrelic_unified_key"
+    ],
+    "modified_detectors": []
+  },
+  "2.6.13": {
+    "release_date": "2019-12-13T11:22:58+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.6.12": {
+    "release_date": "2019-12-12T13:24:39+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.6.11": {
+    "release_date": "2019-12-12T12:54:10+00:00",
+    "added_detectors": [
+      "moneywave_api_key"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.6.10": {
+    "release_date": "2019-12-11T18:23:19+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.6.9": {
+    "release_date": "2019-12-11T16:20:08+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.6.8": {
+    "release_date": "2019-12-09T16:00:49+00:00",
+    "added_detectors": [
+      "base64_rsa_private_key"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.6.7": {
+    "release_date": "2019-12-09T10:56:41+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.6.6": {
+    "release_date": "2019-12-08T20:28:44+00:00",
+    "added_detectors": [
+      "flutterwave_api_key"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.6.5": {
+    "release_date": "2019-12-07T19:33:41+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.6.4": {
+    "release_date": "2019-12-06T14:28:42+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.6.3": {
+    "release_date": "2019-12-05T19:44:27+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.6.2": {
+    "release_date": "2019-12-04T22:14:36+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.6.1": {
+    "release_date": "2019-12-03T14:25:41+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.6.0": {
+    "release_date": "2019-12-02T18:14:04+01:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.5.12": {
+    "release_date": "2019-12-02T17:04:55+00:00",
+    "added_detectors": [
+      "json_web_token",
+      "kubernetes_jwt"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.5.11": {
+    "release_date": "2019-12-02T16:18:26+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.5.10": {
+    "release_date": "2019-12-02T14:49:01+00:00",
+    "added_detectors": [
+      "kubernetes_user_certificate"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.5.9": {
+    "release_date": "2019-11-29T10:29:08+00:00",
+    "added_detectors": [
+      "basic_auth_string"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.5.8": {
+    "release_date": "2019-11-29T10:11:41+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.5.7": {
+    "release_date": "2019-11-27T11:06:38+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.5.6": {
+    "release_date": "2019-11-26T17:47:11+00:00",
+    "added_detectors": [
+      "smtp_assignment"
+    ],
+    "removed_detectors": [
+      "smtp_assignement"
+    ],
+    "modified_detectors": []
+  },
+  "2.5.5": {
+    "release_date": "2019-11-22T18:21:54+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.5.4": {
+    "release_date": "2019-11-22T15:13:29+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.5.3": {
+    "release_date": "2019-11-22T14:53:05+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.5.2": {
+    "release_date": "2019-11-22T14:36:03+00:00",
+    "added_detectors": [
+      "postman_api_key"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.5.1": {
+    "release_date": "2019-11-21T17:02:11+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.5.0": {
+    "release_date": "2019-11-20T00:33:58+01:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.4.14": {
+    "release_date": "2019-11-18T17:20:39+00:00",
+    "added_detectors": [
+      "smtp_assignement"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.4.13": {
+    "release_date": "2019-11-18T15:39:49+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.4.12": {
+    "release_date": "2019-11-18T15:00:43+00:00",
+    "added_detectors": [
+      "akamai_token"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.4.11": {
+    "release_date": "2019-11-16T18:58:58+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.4.10": {
+    "release_date": "2019-11-15T09:18:55+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.4.9": {
+    "release_date": "2019-11-14T23:49:19+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.4.8": {
+    "release_date": "2019-11-14T23:24:19+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.4.7": {
+    "release_date": "2019-11-14T19:39:30+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.4.6": {
+    "release_date": "2019-11-13T15:24:00+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.4.5": {
+    "release_date": "2019-11-13T13:40:05+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.4.4": {
+    "release_date": "2019-11-08T13:35:35+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.4.3": {
+    "release_date": "2019-11-04T18:21:23+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.4.2": {
+    "release_date": "2019-11-04T15:20:54+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.4.1": {
+    "release_date": "2019-11-01T16:25:36+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.4.0": {
+    "release_date": "2019-11-01T12:44:22+01:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.3.23": {
+    "release_date": "2019-11-01T11:05:24+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.3.22": {
+    "release_date": "2019-10-31T15:42:59+00:00",
+    "added_detectors": [
+      "elastic_cloud_uri",
+      "ssh_password",
+      "username_and_password_in_ftp"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.3.21": {
+    "release_date": "2019-10-30T23:31:01+00:00",
+    "added_detectors": [
+      "sqreen_token"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.3.20": {
+    "release_date": "2019-10-30T23:05:13+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.3.19": {
+    "release_date": "2019-10-30T11:32:38+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.3.18": {
+    "release_date": "2019-10-29T15:38:25+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.3.17": {
+    "release_date": "2019-10-28T23:37:27+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.3.16": {
+    "release_date": "2019-10-28T23:17:41+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.3.15": {
+    "release_date": "2019-10-28T18:29:56+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.3.14": {
+    "release_date": "2019-10-28T18:12:12+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.3.13": {
+    "release_date": "2019-10-27T21:12:24+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.3.12": {
+    "release_date": "2019-10-27T20:46:40+00:00",
+    "added_detectors": [
+      "fastly_personal_token"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.3.11": {
+    "release_date": "2019-10-27T17:04:10+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.3.10": {
+    "release_date": "2019-10-24T12:58:00+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.3.9": {
+    "release_date": "2019-10-23T15:48:18+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.3.8": {
+    "release_date": "2019-10-21T20:35:05+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.3.7": {
+    "release_date": "2019-10-21T13:11:38+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.3.6": {
+    "release_date": "2019-10-20T15:28:40+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.3.5": {
+    "release_date": "2019-10-20T13:43:34+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.3.4": {
+    "release_date": "2019-10-19T21:46:39+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.3.3": {
+    "release_date": "2019-10-18T13:26:39+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.3.2": {
+    "release_date": "2019-10-17T14:49:23+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.3.1": {
+    "release_date": "2019-10-17T14:30:08+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.3.0": {
+    "release_date": "2019-10-17T13:54:53+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.2.6": {
+    "release_date": "2019-10-17T13:39:51+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.2.5": {
+    "release_date": "2019-10-14T15:10:34+00:00",
+    "added_detectors": [
+      "terraform_cloud_personal_token",
+      "yahoo_oauth2"
+    ],
+    "removed_detectors": [
+      "terraform",
+      "yahoo_oauth2_keys"
+    ],
+    "modified_detectors": []
+  },
+  "2.2.4": {
+    "release_date": "2019-10-13T02:18:08+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.2.3": {
+    "release_date": "2019-10-12T21:18:34+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.2.2": {
+    "release_date": "2019-10-11T16:38:57+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.2.1": {
+    "release_date": "2019-10-11T16:05:43+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.2.0": {
+    "release_date": "2019-10-11T15:44:34+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.1.10": {
+    "release_date": "2019-10-09T15:19:47+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.1.9": {
+    "release_date": "2019-10-09T15:04:14+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.1.8": {
+    "release_date": "2019-10-09T09:48:50+00:00",
+    "added_detectors": [
+      "codeclimate_key",
+      "outlook_team_webhook"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.1.7": {
+    "release_date": "2019-10-08T09:47:50+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.1.6": {
+    "release_date": "2019-10-01T09:42:36+00:00",
+    "added_detectors": [
+      "github_app_keys"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.1.5": {
+    "release_date": "2019-10-01T09:14:41+00:00",
+    "added_detectors": [
+      "newrelic_admin_key",
+      "newrelic_api_key",
+      "newrelic_insights_insert_key",
+      "newrelic_unified_key"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.1.4": {
+    "release_date": "2019-09-12T14:08:39+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.1.3": {
+    "release_date": "2019-09-07T14:15:47+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.1.2": {
+    "release_date": "2019-09-02T12:17:39+00:00",
+    "added_detectors": [
+      "salesforce_refresh_tokens",
+      "zapier_webhook_url"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.1.1": {
+    "release_date": "2019-09-01T21:51:09+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.1.0": {
+    "release_date": "2019-08-20T16:12:15+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.0.7": {
+    "release_date": "2019-07-16T12:10:28+00:00",
+    "added_detectors": [
+      "anypoint_keys",
+      "etsy",
+      "grafana_personal_token",
+      "okta_keys",
+      "okta_token",
+      "open_weather_map",
+      "spotify_keys"
+    ],
+    "removed_detectors": [
+      "etsy_openapi"
+    ],
+    "modified_detectors": []
+  },
+  "2.0.6": {
+    "release_date": "2019-07-16T08:02:51+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.0.5": {
+    "release_date": "2019-07-08T15:04:21+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.0.4": {
+    "release_date": "2019-07-08T09:35:58+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.0.3": {
+    "release_date": "2019-07-04T16:42:39+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.0.2": {
+    "release_date": "2019-06-20T18:08:48+00:00",
+    "added_detectors": [
+      "terraform"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.0.1": {
+    "release_date": "2019-06-19T17:20:18+00:00",
+    "added_detectors": [
+      "amazon_mws_token",
+      "artifactory_token",
+      "discord_webhook_url",
+      "facebook_access_token",
+      "paypal_braintree_keys",
+      "slack_webhook_url",
+      "yahoo_oauth2_keys"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "2.0.0": {
+    "release_date": "2019-06-17T13:32:03+00:00",
+    "added_detectors": [
+      "amqp_uri",
+      "mongo_assignment",
+      "mongo_uri",
+      "mssql_assignment",
+      "mssql_uri",
+      "mysql_assignment",
+      "mysql_uri",
+      "odbc_connection_string",
+      "oracle_uri",
+      "postgres_assignment",
+      "postgres_uri",
+      "redis_uri"
+    ],
+    "removed_detectors": [
+      "amazon_mws_token",
+      "artifactory_token",
+      "discord_webhook_url",
+      "facebook_access_token",
+      "lob_api",
+      "microsoft_sharepoint_api_keys",
+      "paypal_braintree_keys",
+      "payplug_api",
+      "paystack_api",
+      "slack_webhook_url",
+      "whatsapp_token",
+      "yahoo_oauth2_keys"
+    ],
+    "modified_detectors": []
+  },
+  "1.0.26": {
+    "release_date": "2019-05-28T17:57:01+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "1.0.25": {
+    "release_date": "2019-05-16T15:20:10+00:00",
+    "added_detectors": [
+      "lob_api",
+      "payplug_api",
+      "paystack_api"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "1.0.24": {
+    "release_date": "2019-05-16T12:14:33+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "1.0.23": {
+    "release_date": "2019-05-10T14:36:56+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "1.0.22": {
+    "release_date": "2019-05-10T12:41:53+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "1.0.21": {
+    "release_date": "2019-05-09T11:52:28+00:00",
+    "added_detectors": [
+      "private_key_generic"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "1.0.20": {
+    "release_date": "2019-05-02T09:29:42+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "1.0.19": {
+    "release_date": "2019-04-29T14:46:10+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "1.0.18": {
+    "release_date": "2019-04-29T09:31:48+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "1.0.17": {
+    "release_date": "2019-04-23T22:43:15+02:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "1.0.16": {
+    "release_date": "2019-04-23T05:40:31+00:00",
+    "added_detectors": [
+      "amazon_mws_token",
+      "artifactory_token",
+      "discord_webhook_url",
+      "facebook_access_token",
+      "microsoft_sharepoint_api_keys",
+      "paypal_braintree_keys",
+      "slack_webhook_url",
+      "whatsapp_token",
+      "yahoo_oauth2_keys"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "1.0.15": {
+    "release_date": "2019-04-04T09:59:05+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "1.0.14": {
+    "release_date": "2019-04-04T08:31:45+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "1.0.13": {
+    "release_date": "2019-04-04T08:22:44+00:00",
+    "added_detectors": [
+      "algolia_monitoring",
+      "algolia_search"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "1.0.12": {
+    "release_date": "2019-03-16T21:58:51+00:00",
+    "added_detectors": [
+      "line_messaging_api"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "1.0.11": {
+    "release_date": "2019-02-25T18:30:50+00:00",
+    "added_detectors": [
+      "google_oauth2"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "1.0.10": {
+    "release_date": "2019-01-22T17:01:47+00:00",
+    "added_detectors": [
+      "zoho_oauth2"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "1.0.9": {
+    "release_date": "2019-01-14T23:32:06+01:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "1.0.8": {
+    "release_date": "2019-01-14T18:01:59+00:00",
+    "added_detectors": [
+      "asana_access_token",
+      "nexmo_api_keys",
+      "pagerduty_api_key"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "1.0.7": {
+    "release_date": "2019-01-12T20:18:05+01:00",
+    "added_detectors": [
+      "cloudflare_auth_email",
+      "tencent_cloud_keys"
+    ],
+    "removed_detectors": [
+      "cloudflare",
+      "tencent_cloud"
+    ],
+    "modified_detectors": []
+  },
+  "1.0.6": {
+    "release_date": "2019-01-12T15:54:39+01:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "1.0.5": {
+    "release_date": "2019-01-11T15:10:03+00:00",
+    "added_detectors": [
+      "tencent_cloud"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "1.0.4": {
+    "release_date": "2019-01-10T17:58:29+00:00",
+    "added_detectors": [
+      "cloudflare",
+      "cloudflare_ca_key",
+      "linode_oauth_token"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "1.0.3": {
+    "release_date": "2018-12-17T00:37:30+01:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "1.0.2": {
+    "release_date": "2018-12-17T00:30:57+01:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "1.0.1": {
+    "release_date": "2018-12-14T01:03:55+01:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "1.0.0": {
+    "release_date": "2018-12-13T23:51:18+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "0.0.3": {
+    "release_date": "2018-12-13T23:45:19+00:00",
+    "added_detectors": [
+      "bitcoin_wallet_address",
+      "digitalocean_spaces_token",
+      "eventbrite_oauth_token",
+      "packet_api_key",
+      "rackspace_api_key",
+      "twilio_api_keys"
+    ],
+    "removed_detectors": [
+      "rackspace_basic_auth"
+    ],
+    "modified_detectors": []
+  },
+  "0.0.2": {
+    "release_date": "2018-12-14T00:40:50+01:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "0.0.1-rc46": {
+    "release_date": "2018-12-13T23:17:07+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "0.0.1-rc45": {
+    "release_date": "2018-12-13T23:04:42+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "0.0.1-rc44": {
+    "release_date": "2018-12-10T21:35:42+00:00",
+    "added_detectors": [
+      "etsy_openapi"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "0.0.1-rc43": {
+    "release_date": "2018-12-06T22:21:17+00:00",
+    "added_detectors": [
+      "eventbrite_oauth",
+      "salesforce_oauth2"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "0.0.1-rc42": {
+    "release_date": "2018-12-03T17:35:05+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "0.0.1-rc41": {
+    "release_date": "2018-12-03T17:35:05+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "0.0.1-rc40": {
+    "release_date": "2018-12-02T19:57:30+01:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "0.0.1-rc39": {
+    "release_date": "2018-11-28T20:57:16+01:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "0.0.1-rc38": {
+    "release_date": "2018-11-28T15:54:04+01:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "0.0.1-rc37": {
+    "release_date": "2018-11-26T20:07:29+01:00",
+    "added_detectors": [
+      "datadog_api_key"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "0.0.1-rc36": {
+    "release_date": "2018-11-26T15:15:52+01:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "0.0.1-rc35": {
+    "release_date": "2018-11-26T15:10:59+01:00",
+    "added_detectors": [
+      "mapbox_secret_token"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "0.0.1-rc34": {
+    "release_date": "2018-11-26T14:14:20+01:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "0.0.1-rc33": {
+    "release_date": "2018-11-21T13:59:05+01:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "0.0.1-rc32": {
+    "release_date": "2018-11-21T10:18:14+01:00",
+    "added_detectors": [
+      "netlify_personal_token",
+      "trello_api_keys"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "0.0.1-rc31": {
+    "release_date": "2018-11-18T12:34:11+00:00",
+    "added_detectors": [
+      "facebook_app_keys"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "0.0.1-rc30": {
+    "release_date": "2018-11-16T01:06:24+01:00",
+    "added_detectors": [
+      "sentry_token"
+    ],
+    "removed_detectors": [
+      "sentry_api_key"
+    ],
+    "modified_detectors": []
+  },
+  "0.0.1-rc29": {
+    "release_date": "2018-11-15T23:52:29+01:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "0.0.1-rc28": {
+    "release_date": "2018-11-15T23:40:02+01:00",
+    "added_detectors": [
+      "hunter_api_key"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "0.0.1-rc27": {
+    "release_date": "2018-11-15T17:13:33+00:00",
+    "added_detectors": [
+      "ibm_platform_api_key",
+      "sentry_api_key"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "0.0.1-rc26": {
+    "release_date": "2018-11-15T17:11:59+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "0.0.1-rc25": {
+    "release_date": "2018-11-15T11:23:05+00:00",
+    "added_detectors": [
+      "private_key_dsa",
+      "private_key_elliptic",
+      "private_key_encrypted",
+      "private_key_openssh",
+      "private_key_pgp",
+      "private_key_rsa"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "0.0.1-rc24": {
+    "release_date": "2018-11-14T23:01:56+01:00",
+    "added_detectors": [],
+    "removed_detectors": [
+      "private_key_dsa",
+      "private_key_elliptic",
+      "private_key_encrypted",
+      "private_key_openssh",
+      "private_key_pgp",
+      "private_key_rsa"
+    ],
+    "modified_detectors": []
+  },
+  "0.0.1-rc23": {
+    "release_date": "2018-11-14T16:25:51+01:00",
+    "added_detectors": [
+      "private_key_dsa",
+      "private_key_elliptic",
+      "private_key_encrypted",
+      "private_key_openssh",
+      "private_key_pgp",
+      "private_key_rsa"
+    ],
+    "removed_detectors": [
+      "unknown"
+    ],
+    "modified_detectors": []
+  },
+  "0.0.1-rc22": {
+    "release_date": "2018-11-13T13:40:46+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "0.0.1-rc21": {
+    "release_date": "2018-11-12T11:21:53+01:00",
+    "added_detectors": [
+      "unknown"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "0.0.1-rc20": {
+    "release_date": "2018-11-07T23:44:21+01:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "0.0.1-rc19": {
+    "release_date": "2018-11-02T16:56:20+01:00",
+    "added_detectors": [
+      "microsoft_azure_storage_account_key"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "0.0.1-rc18": {
+    "release_date": "2018-11-02T12:32:55+01:00",
+    "added_detectors": [
+      "fullcontact_api_key_v3"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "0.0.1-rc17": {
+    "release_date": "2018-11-02T11:03:16+01:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "0.0.1-rc16": {
+    "release_date": "2018-11-01T16:05:35+01:00",
+    "added_detectors": [
+      "freshdesk_api_key"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "0.0.1-rc15": {
+    "release_date": "2018-10-27T18:51:02+02:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "0.0.1-rc14": {
+    "release_date": "2018-10-27T18:46:22+02:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "0.0.1-rc13": {
+    "release_date": "2018-10-25T19:02:04+02:00",
+    "added_detectors": [
+      "plivo_server_tokens"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "0.0.1-rc12": {
+    "release_date": "2018-10-25T15:46:58+02:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "0.0.1-rc11": {
+    "release_date": "2018-10-22T16:40:58-07:00",
+    "added_detectors": [
+      "intercom_access_token"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "0.0.1-rc10": {
+    "release_date": "2018-10-17T14:43:29+02:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "0.0.1-rc9": {
+    "release_date": "2018-10-11T14:09:08+02:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "0.0.1-rc8": {
+    "release_date": "2018-10-09T11:17:34+02:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "0.0.1-rc7": {
+    "release_date": "2018-10-08T19:42:19+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "0.0.1-rc6": {
+    "release_date": "2018-10-08T16:19:20+02:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "0.0.1-rc5": {
+    "release_date": "2018-10-01T19:40:07+02:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "0.0.1-rc4": {
+    "release_date": "2018-09-08T16:56:50+02:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "0.0.1-rc3": {
+    "release_date": "2018-08-24T12:32:33+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "0.0.1-rc2": {
+    "release_date": "2018-08-03T10:32:39+00:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "0.0.1-rc1": {
+    "release_date": "2018-07-26T14:43:03+02:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "0.0.1-rc0": {
+    "release_date": "2018-06-02T11:45:39+02:00",
+    "added_detectors": [],
+    "removed_detectors": [],
+    "modified_detectors": []
+  },
+  "0.0.1": {
+    "release_date": "2018-06-02T11:45:39+02:00",
+    "added_detectors": [
+      "algolia_admin",
+      "alibaba_iam",
+      "aws_iam",
+      "bitfinex_keys",
+      "bitstamp_keys",
+      "bittrex_keys",
+      "cex_keys",
+      "clarifai_v2",
+      "clearbit_basic_auth",
+      "clockwork",
+      "cloudsight",
+      "coinbase_keys",
+      "datadog_api_keys",
+      "digitalocean_token",
+      "dropbox_token",
+      "dwolla_oauth2",
+      "elasticemail",
+      "github_token",
+      "gitlab_personnal_token",
+      "google_recaptcha",
+      "googleaiza",
+      "googlecloud",
+      "heroku_token",
+      "hubspot_apikey",
+      "ibm api id secret",
+      "instagram_oauth2",
+      "kairos_keys",
+      "kraken_keys",
+      "mailchimp_basic_auth",
+      "mailgun_basic_auth",
+      "mailjet_keys",
+      "newrelic_agent_token",
+      "ovh_api",
+      "paymill",
+      "paypal_oauth2",
+      "pepipost",
+      "poloniex_keys",
+      "postmark",
+      "rackspace_basic_auth",
+      "salesloft_apikey",
+      "scaleway_basic_auth",
+      "sendgrid",
+      "sendinblue_v2",
+      "sendinblue_v3",
+      "sentrydsn",
+      "shodan",
+      "shopify_private",
+      "slackbototken",
+      "slackusertoken",
+      "sparkpost",
+      "square_token",
+      "stripe",
+      "telegrambot",
+      "twilio_basic_auth",
+      "twitter_tokens",
+      "uber_oauth2",
+      "uber_server_token",
+      "vultr",
+      "zendesk_token",
+      "zillow"
+    ],
+    "removed_detectors": [],
+    "modified_detectors": []
+  }
+}
