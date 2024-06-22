@@ -4,11 +4,12 @@ import (
 	"encoding/json"
 	"flag"
 	"fmt"
-	"net/http"
 	"os"
+	"path/filepath"
+	"strings"
 	"time"
 
-	"github.com/PuerkitoBio/goquery"
+	"gopkg.in/yaml.v3"
 )
 
 type Release struct {
@@ -18,15 +19,15 @@ type Release struct {
 	ModifiedDetectors ModifiedDetectors `json:"modified_detectors"`
 }
 type AddedDetectors struct {
-	Generic  []any    `json:"generic"`
+	Generic  []string `json:"generic"`
 	Specific []string `json:"specific"`
 }
 type RemovedDetectors struct {
-	Generic  []any `json:"generic"`
-	Specific []any `json:"specific"`
+	Generic  []string `json:"generic"`
+	Specific []string `json:"specific"`
 }
 type ModifiedDetectors struct {
-	Generic  []any    `json:"generic"`
+	Generic  []string `json:"generic"`
 	Specific []string `json:"specific"`
 }
 
@@ -76,53 +77,121 @@ func main() {
 		return
 	}
 
-	fmt.Println("Added Detectors:")
+	fmt.Printf("Added %v Detectors:\n", len(release.AddedDetectors.Generic)+len(release.AddedDetectors.Specific))
 	for _, detector := range release.AddedDetectors.Generic {
-		fmt.Printf("[%s](%s/secrets-detection/secrets-detection-engine/detectors/generics/%s)\n", detector, basepath, detector)
+		markdownURL, err := buildMarkdownURL(basepath, "generics", detector)
+		if err != nil {
+			fmt.Println(err)
+			return
+		}
+		fmt.Println(markdownURL)
 	}
 	for _, detector := range release.AddedDetectors.Specific {
-		markdownURL, err := getURL("specifics", detector)
+		markdownURL, err := buildMarkdownURL(basepath, "specifics", detector)
 		if err != nil {
-			fmt.Println("Error getting title:", err)
+			fmt.Println(err)
 			return
 		}
-		fmt.Printf("%s", markdownURL)
+		fmt.Println(markdownURL)
 	}
 
-	fmt.Println("Modified Detectors:")
+	fmt.Printf("Modified %v Detectors:\n", len(release.ModifiedDetectors.Generic)+len(release.ModifiedDetectors.Specific))
 	for _, detector := range release.ModifiedDetectors.Generic {
-		fmt.Printf("[%s](%s/secrets-detection/secrets-detection-engine/detectors/generics/%s)\n", detector, basepath, detector)
+		markdownURL, err := buildMarkdownURL(basepath, "generics", detector)
+		if err != nil {
+			fmt.Println(err)
+			return
+		}
+		fmt.Println(markdownURL)
 	}
 	for _, detector := range release.ModifiedDetectors.Specific {
-		markdownURL, err := getURL("specifics", detector)
+		markdownURL, err := buildMarkdownURL(basepath, "specifics", detector)
 		if err != nil {
-			fmt.Println("Error getting title:", err)
+			fmt.Println(err)
 			return
 		}
-		fmt.Printf("%s", markdownURL)
+		fmt.Println(markdownURL)
 	}
 
-	fmt.Println("Removed Detectors:")
+	fmt.Printf("Modified %v Detectors:\n", len(release.RemovedDetectors.Generic)+len(release.RemovedDetectors.Specific))
 	for _, detector := range release.RemovedDetectors.Generic {
-		fmt.Printf("[%s](%s/secrets-detection/secrets-detection-engine/detectors/generics/%s)\n", detector, basepath, detector)
+		markdownURL, err := buildMarkdownURL(basepath, "generics", detector)
+		if err != nil {
+			fmt.Println(err)
+			return
+		}
+		fmt.Println(markdownURL)
 	}
 	for _, detector := range release.RemovedDetectors.Specific {
-		fmt.Printf("[%s](%s/secrets-detection/secrets-detection-engine/detectors/specifics/%s)\n", detector, basepath, detector)
+		markdownURL, err := buildMarkdownURL(basepath, "specifics", detector)
+		if err != nil {
+			fmt.Println(err)
+			return
+		}
+		fmt.Println(markdownURL)
 	}
 }
 
-func getURL(category string, detector any) (string, error) {
-	resp, err := http.Get(fmt.Sprintf("%s/secrets-detection/secrets-detection-engine/detectors/%s/%s", basepath, category, detector))
-	if err != nil {
-		return "Error during get", err
-	}
-	defer resp.Body.Close()
+func findDetectorYAML(detectorName string) (string, error) {
+	dir := "/Users/mathieu.bellon/Desktop/tokenscanner/tokenscanner/config"
+	findThisFile := detectorName + ".yaml"
+	var detectorYAML string
 
-	doc, err := goquery.NewDocumentFromReader(resp.Body)
+	err := filepath.Walk(dir, func(path string, info os.FileInfo, err error) error {
+		if err != nil {
+			return err
+		}
+		if !info.IsDir() && strings.HasSuffix(info.Name(), findThisFile) {
+			detectorYAML = path
+			return filepath.SkipDir
+		}
+		return nil
+	})
 	if err != nil {
-		return "Error during lookup", err
+		return "Walk error (right path?)", err
 	}
-	title := doc.Find("#__docusaurus_skipToContent_fallback > div > main > div > div > div > div > article > div.theme-doc-markdown.markdown > div > div.section_AGm0.is--w-border-btm_hYla.is--rte-section > div.rich-text-block_RQVQ.w-richtext > h1").Text()
-	markdown_url := fmt.Sprintf("[%s](%s/secrets-detection/secrets-detection-engine/detectors/%s/%s)\n", title, basepath, category, detector)
-	return markdown_url, nil
+
+	if detectorYAML == "" {
+		return "", fmt.Errorf("no detector.yaml file found")
+	}
+
+	return detectorYAML, nil
+}
+
+func extractDisplayNameFromYAML(filePath string) (string, error) {
+	// Read the YAML file
+	fileContent, err := os.ReadFile(filePath)
+	if err != nil {
+		return "", fmt.Errorf("error reading file: %w", err)
+	}
+
+	// Parse the YAML data
+	var data map[string]interface{}
+	err = yaml.Unmarshal(fileContent, &data)
+	if err != nil {
+		return "", fmt.Errorf("error parsing YAML: %w", err)
+	}
+
+	// Retrieve the value of display_name
+	displayName, ok := data["display_name"].(string)
+	if !ok {
+		return "", fmt.Errorf("display_name not found or not a string")
+	}
+
+	return displayName, nil
+}
+
+func buildMarkdownURL(basepath, category, detector string) (string, error) {
+	filePath, err := findDetectorYAML(detector)
+	if err != nil {
+		fmt.Println(err)
+		return "", err
+	}
+	displayName, err := extractDisplayNameFromYAML(filePath)
+	if err != nil {
+		fmt.Println(err)
+		return "", err
+	}
+	markdownURL := fmt.Sprintf("[%s](%s/secrets-detection/secrets-detection-engine/detectors/%s/%s)", displayName, basepath, category, detector)
+	return markdownURL, nil
 }
