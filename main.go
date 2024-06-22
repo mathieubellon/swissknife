@@ -11,11 +11,11 @@ func main() {
 	app := cli.NewApp()
 	app.Name = "Swissknife"
 	app.Version = "0.1"
-	app.Usage = "A multi-purposes utility command-line tool for managing GitGuardian's detectors"
+	app.Usage = "A multi-purposes utility command-line tool for managing detectors"
 	app.Commands = []*cli.Command{
 		{
 			Name:   "markdown",
-			Usage:  "Generate markdown changelog links from the specified Tokenscanner version",
+			Usage:  "Generate markdown changelog links from the specified Detection Engine version",
 			Action: generateMarkdown,
 			Flags: []cli.Flag{
 				&cli.StringFlag{
