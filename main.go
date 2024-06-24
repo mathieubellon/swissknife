@@ -11,10 +11,37 @@ import (
 func main() {
 	app := cli.NewApp()
 	app.Name = "Swissknife"
-	app.Version = "0.2"
+	app.Version = "0.3"
 	app.Usage = "https://github.com/mathieubellon/swissknife"
 	app.Description = "Swissknife is a multi-purposes utility command-line tool for managing detectors.\nIt can be used to generate markdown changelog links from the specified Detection Engine version."
 	app.Commands = []*cli.Command{
+		{
+			Name:   "gpg",
+			Usage:  "Generate a GPG key pair",
+			Action: gen_gpg,
+			Flags: []cli.Flag{
+				&cli.StringFlag{
+					Name:  "name",
+					Usage: "Name of the key owner",
+					Value: "John Doe", // Default value
+				},
+				&cli.StringFlag{
+					Name:  "email",
+					Usage: "Email of the key owner",
+					Value: "john.doe@email.com", // Default value
+				},
+				&cli.StringFlag{
+					Name:  "passphrase",
+					Usage: "Passphrase to encrypt the private key",
+					Value: "LongSecret", // Default value
+				},
+				&cli.IntFlag{
+					Name:  "rsa-bits",
+					Usage: "Size of RSA key to generate",
+					Value: 2048, // Default value
+				},
+			},
+		},
 		{
 			Name:   "gencert",
 			Usage:  "Generate an example of self-signed certificate",
