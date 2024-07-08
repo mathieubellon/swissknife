@@ -82,8 +82,8 @@ func main() {
 			},
 		},
 		{
-			Name:   "markdown",
-			Usage:  "Generate markdown changelog links from the specified Detection Engine version",
+			Name:   "print",
+			Usage:  "Generate markdown or html changelog links from the specified Detection Engine version",
 			Action: generateMarkdown,
 			Flags: []cli.Flag{
 				&cli.StringFlag{
@@ -99,6 +99,11 @@ func main() {
 				&cli.BoolFlag{
 					Name:  "absolute-url",
 					Usage: "Use absolute URLs in the markdown output",
+				},
+				&cli.StringFlag{
+					Name:  "format",
+					Usage: "markdown or html",
+					Value: "markdown", // Default value
 				},
 			},
 		},

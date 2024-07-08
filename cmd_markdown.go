@@ -38,11 +38,12 @@ func generateMarkdown(Ctx *cli.Context) error {
 	basepath := ".."
 	repo := Ctx.String("repo")
 	version := Ctx.String("version")
+	format := Ctx.String("format")
 	if Ctx.Bool("absolute-url") {
 		basepath = "https://docs.gitguardian.com"
 	}
 
-	filePath := fmt.Sprintf("%s/tokenscanner/tokenscanner/data/DETECTORS_CHANGELOG.json", repo)
+	filePath := fmt.Sprintf("%s/tokenscanner/data/DETECTORS_CHANGELOG.json", repo)
 	fileContent, err := os.ReadFile(filePath)
 	if err != nil {
 		return fmt.Errorf("error reading file: %w", err)
@@ -70,57 +71,57 @@ func generateMarkdown(Ctx *cli.Context) error {
 
 	fmt.Printf("Added %v Detectors:\n", len(release.AddedDetectors.Generic)+len(release.AddedDetectors.Specific))
 	for _, detector := range release.AddedDetectors.Generic {
-		markdownURL, err := buildMarkdownURL(repo, basepath, "generics", detector)
+		output, err := buildOutput(repo, basepath, "generics", detector, format)
 		if err != nil {
 			return err
 		}
-		fmt.Println(markdownURL)
+		fmt.Println(output)
 	}
 	for _, detector := range release.AddedDetectors.Specific {
-		markdownURL, err := buildMarkdownURL(repo, basepath, "specifics", detector)
+		output, err := buildOutput(repo, basepath, "specifics", detector, format)
 		if err != nil {
 			return err
 		}
-		fmt.Println(markdownURL)
+		fmt.Println(output)
 	}
 
 	fmt.Printf("Modified %v Detectors:\n", len(release.ModifiedDetectors.Generic)+len(release.ModifiedDetectors.Specific))
 	for _, detector := range release.ModifiedDetectors.Generic {
-		markdownURL, err := buildMarkdownURL(repo, basepath, "generics", detector)
+		output, err := buildOutput(repo, basepath, "generics", detector, format)
 		if err != nil {
 			return err
 		}
-		fmt.Println(markdownURL)
+		fmt.Println(output)
 	}
 	for _, detector := range release.ModifiedDetectors.Specific {
-		markdownURL, err := buildMarkdownURL(repo, basepath, "specifics", detector)
+		output, err := buildOutput(repo, basepath, "specifics", detector, format)
 		if err != nil {
 			return err
 		}
-		fmt.Println(markdownURL)
+		fmt.Println(output)
 	}
 
 	fmt.Printf("Modified %v Detectors:\n", len(release.RemovedDetectors.Generic)+len(release.RemovedDetectors.Specific))
 	for _, detector := range release.RemovedDetectors.Generic {
-		markdownURL, err := buildMarkdownURL(repo, basepath, "generics", detector)
+		output, err := buildOutput(repo, basepath, "generics", detector, format)
 		if err != nil {
 			return err
 		}
-		fmt.Println(markdownURL)
+		fmt.Println(output)
 	}
 	for _, detector := range release.RemovedDetectors.Specific {
-		markdownURL, err := buildMarkdownURL(repo, basepath, "specifics", detector)
+		output, err := buildOutput(repo, basepath, "specifics", detector, format)
 		if err != nil {
 			return err
 		}
-		fmt.Println(markdownURL)
+		fmt.Println(output)
 	}
 
 	return nil
 }
 
 func findDetectorYAML(directory, detectorName string) (string, error) {
-	dir := fmt.Sprintf("%s/tokenscanner/tokenscanner/config", directory)
+	dir := fmt.Sprintf("%s/tokenscanner/config", directory)
 	findThisFile := detectorName + ".yaml"
 	var detectorYAML string
 
@@ -165,7 +166,7 @@ func extractDisplayNameFromYAML(filePath string) (string, error) {
 	return displayName, nil
 }
 
-func buildMarkdownURL(repo, basepath, category, detector string) (string, error) {
+func buildOutput(repo, basepath, category, detector, format string) (string, error) {
 	filePath, err := findDetectorYAML(repo, detector)
 	if err != nil {
 		return "", err
@@ -174,6 +175,12 @@ func buildMarkdownURL(repo, basepath, category, detector string) (string, error)
 	if err != nil {
 		return "", err
 	}
-	markdownURL := fmt.Sprintf("[%s](%s/secrets-detection/secrets-detection-engine/detectors/%s/%s)", displayName, basepath, category, detector)
-	return markdownURL, nil
+
+	if format == "markdown" {
+		return fmt.Sprintf("[%s](%s/secrets-detection/secrets-detection-engine/detectors/%s/%s)", displayName, basepath, category, detector), nil
+	} else if format == "html" {
+		return fmt.Sprintf("<a href=\"%s/secrets-detection/secrets-detection-engine/detectors/%s/%s\">%s</a>", basepath, category, detector, displayName), nil
+	} else {
+		return "", fmt.Errorf("invalid output type")
+	}
 }
