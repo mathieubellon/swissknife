@@ -84,7 +84,7 @@ func main() {
 		{
 			Name:   "print",
 			Usage:  "Generate markdown or html changelog links from the specified Detection Engine version",
-			Action: generateMarkdown,
+			Action: printOutput,
 			Flags: []cli.Flag{
 				&cli.StringFlag{
 					Name:     "version",

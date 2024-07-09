@@ -34,7 +34,7 @@ type ModifiedDetectors struct {
 	Specific []string `json:"specific"`
 }
 
-func generateMarkdown(Ctx *cli.Context) error {
+func printOutput(Ctx *cli.Context) error {
 	basepath := ".."
 	repo := Ctx.String("repo")
 	version := Ctx.String("version")
