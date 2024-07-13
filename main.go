@@ -11,7 +11,7 @@ import (
 func main() {
 	app := cli.NewApp()
 	app.Name = "Swissknife"
-	app.Version = "0.3"
+	app.Version = "0.4"
 	app.Usage = "https://github.com/mathieubellon/swissknife"
 	app.Description = "Swissknife is a multi-purposes utility command-line tool for managing detectors.\nIt can be used to generate markdown changelog links from the specified Detection Engine version."
 	app.Commands = []*cli.Command{

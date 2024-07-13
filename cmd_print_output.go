@@ -121,7 +121,7 @@ func printOutput(Ctx *cli.Context) error {
 }
 
 func findDetectorYAML(directory, detectorName string) (string, error) {
-	dir := fmt.Sprintf("%s/tokenscanner/config", directory)
+	dir := fmt.Sprintf("%s/tokenscanner/config/detectors", directory)
 	findThisFile := detectorName + ".yaml"
 	var detectorYAML string
 
@@ -146,40 +146,45 @@ func findDetectorYAML(directory, detectorName string) (string, error) {
 	return detectorYAML, nil
 }
 
-func extractDisplayNameFromYAML(filePath string) (string, error) {
+func extractDisplayNameFromYAML(filePath string) (string, string, error) {
 	fileContent, err := os.ReadFile(filePath)
 	if err != nil {
-		return "", fmt.Errorf("error reading file: %w", err)
+		return "", "", fmt.Errorf("error reading file: %w", err)
 	}
 
 	var data map[string]interface{}
 	err = yaml.Unmarshal(fileContent, &data)
 	if err != nil {
-		return "", fmt.Errorf("error parsing YAML: %w", err)
+		return "", "", fmt.Errorf("error parsing YAML: %w", err)
 	}
 
 	displayName, ok := data["display_name"].(string)
 	if !ok {
-		return "", fmt.Errorf("display_name not found or not a string")
+		return "", "", fmt.Errorf("display_name not found or not a string")
+	}
+	groupName, ok := data["group_name"].(string)
+	if !ok {
+		return "", "", fmt.Errorf("groupname_name not found or not a string")
 	}
 
-	return displayName, nil
+	return displayName, groupName, nil
 }
 
 func buildOutput(repo, basepath, category, detector, format string) (string, error) {
+
 	filePath, err := findDetectorYAML(repo, detector)
 	if err != nil {
 		return "", err
 	}
-	displayName, err := extractDisplayNameFromYAML(filePath)
+	displayName, groupName, err := extractDisplayNameFromYAML(filePath)
 	if err != nil {
 		return "", err
 	}
 
 	if format == "markdown" {
-		return fmt.Sprintf("[%s](%s/secrets-detection/secrets-detection-engine/detectors/%s/%s)", displayName, basepath, category, detector), nil
+		return fmt.Sprintf("[%s](%s/secrets-detection/secrets-detection-engine/detectors/%s/%s)", displayName, basepath, category, groupName), nil
 	} else if format == "html" {
-		return fmt.Sprintf("<a href=\"%s/secrets-detection/secrets-detection-engine/detectors/%s/%s\">%s</a>", basepath, category, detector, displayName), nil
+		return fmt.Sprintf("<a href=\"%s/secrets-detection/secrets-detection-engine/detectors/%s/%s\">%s</a>", basepath, category, groupName, displayName), nil
 	} else {
 		return "", fmt.Errorf("invalid output type")
 	}
