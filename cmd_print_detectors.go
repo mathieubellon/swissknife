@@ -11,24 +11,24 @@ import (
 )
 
 type Detector struct {
-	Type        string `yaml:"type"`
-	Nature      string `yaml:"nature,omitempty"`
-	Name        string `yaml:"name"`
-	Family      string `yaml:"family"`
-	GroupName   string `yaml:"group_name"`
-	DisplayName string `yaml:"display_name"`
-	URL         string
+	Type        string `yaml:"type" json:"type"`
+	Nature      string `yaml:"nature,omitempty" json:"nature,omitempty"`
+	Name        string `yaml:"name" json:"name"`
+	Family      string `yaml:"family" json:"family"`
+	GroupName   string `yaml:"group_name" json:"group_name"`
+	DisplayName string `yaml:"display_name" json:"display_name"`
+	URL         string `json:"url"`
 	Metadata    struct {
-		ShortTail                   bool    `yaml:"short_tail,omitempty"`
-		Category                    string  `yaml:"category,omitempty"`
-		FrequencyEstimate           float64 `yaml:"frequency_estimate,omitempty"`
-		PercentageValid             float64 `yaml:"percentage_valid,omitempty"`
-		FrequencyEstimateAfterCheck float64 `yaml:"frequency_estimate_after_check,omitempty"`
-		SupportsOnPrem              bool    `yaml:"supports_on_prem,omitempty"`
+		ShortTail                   bool    `yaml:"short_tail,omitempty" json:"short_tail,omitempty"`
+		Category                    string  `yaml:"category,omitempty" json:"category,omitempty"`
+		FrequencyEstimate           float64 `yaml:"frequency_estimate,omitempty" json:"frequency_estimate,omitempty"`
+		PercentageValid             float64 `yaml:"percentage_valid,omitempty" json:"percentage_valid,omitempty"`
+		FrequencyEstimateAfterCheck float64 `yaml:"frequency_estimate_after_check,omitempty" json:"frequency_estimate_after_check,omitempty"`
+		SupportsOnPrem              bool    `yaml:"supports_on_prem,omitempty" json:"supports_on_prem,omitempty"`
 		Config                      struct {
-			RequiredCheck bool `yaml:"required_check,omitempty"`
-		} `yaml:"config,omitempty"`
-	} `yaml:"metadata,omitempty"`
+			RequiredCheck bool `yaml:"required_check,omitempty" json:"required_check,omitempty"`
+		} `yaml:"config,omitempty" json:"config,omitempty"`
+	} `yaml:"metadata,omitempty" json:"metadata,omitempty"`
 }
 
 func printDetectorsList(Ctx *cli.Context) error {
