@@ -40,7 +40,7 @@ func printOutput(Ctx *cli.Context) error {
 	version := Ctx.String("version")
 	format := Ctx.String("format")
 	if Ctx.Bool("absolute-url") {
-		basepath = "https://docs.gitguardian.com"
+		basepath = GitGuardianBasePath
 	}
 
 	filePath := fmt.Sprintf("%s/tokenscanner/data/DETECTORS_CHANGELOG.json", repo)

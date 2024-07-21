@@ -8,10 +8,12 @@ import (
 	"github.com/urfave/cli/v2"
 )
 
+const GitGuardianBasePath = "https://docs.gitguardian.com"
+
 func main() {
 	app := cli.NewApp()
 	app.Name = "Swissknife"
-	app.Version = "0.4"
+	app.Version = "0.5"
 	app.Usage = "https://github.com/mathieubellon/swissknife"
 	app.Description = "Swissknife is a multi-purposes utility command-line tool for managing detectors.\nIt can be used to generate markdown changelog links from the specified Detection Engine version."
 	app.Commands = []*cli.Command{
@@ -104,6 +106,26 @@ func main() {
 					Name:  "format",
 					Usage: "markdown or html",
 					Value: "markdown", // Default value
+				},
+			},
+		},
+		{
+			Name:   "list",
+			Usage:  "Generate markdown or html detectors list",
+			Action: printDetectorsList,
+			Flags: []cli.Flag{
+				&cli.StringFlag{
+					Name:  "repo",
+					Usage: "Specify the Tokenscanner repo local path",
+					Value: ".", // Default value
+				},
+				&cli.BoolFlag{
+					Name:  "write-one-json",
+					Usage: "Write the output to disk as one single json file",
+				},
+				&cli.BoolFlag{
+					Name:  "write-multiple-json",
+					Usage: "Write the output to disk as multiple json file, one by detector, in a detectors folder",
 				},
 			},
 		},
