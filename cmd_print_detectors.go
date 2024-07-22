@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"strings"
 
 	"github.com/urfave/cli/v2"
 	"gopkg.in/yaml.v3"
@@ -17,7 +18,8 @@ type Detector struct {
 	Family      string `yaml:"family" json:"family"`
 	GroupName   string `yaml:"group_name" json:"group_name"`
 	DisplayName string `yaml:"display_name" json:"display_name"`
-	URL         string `json:"url"`
+	URL         string `yaml:"url,omitempty" json:"url,omitempty"`
+	BrandName   string `yaml:"brand_name,omitempty" json:"brand_name,omitempty"`
 	Metadata    struct {
 		ShortTail                   bool    `yaml:"short_tail,omitempty" json:"short_tail,omitempty"`
 		Category                    string  `yaml:"category,omitempty" json:"category,omitempty"`
@@ -61,6 +63,7 @@ func printDetectorsList(Ctx *cli.Context) error {
 				detector.Nature = "generics"
 			}
 			detector.URL = fmt.Sprintf("%s/secrets-detection/secrets-detection-engine/detectors/%s/%s", basepath, detector.Nature, detector.GroupName)
+			detector.BrandName = detector.GroupName[:strings.Index(detector.GroupName, "_")]
 			DetectorsList = append(DetectorsList, detector)
 		}
 		return nil
