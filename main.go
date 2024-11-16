@@ -129,6 +129,17 @@ func main() {
 				},
 			},
 		},
+		{
+			Name:   "vscode",
+			Usage:  "Get VScode competitors download count and save to Supabase",
+			Action: vscode,
+			Flags: []cli.Flag{
+				&cli.BoolFlag{
+					Name:  "verbose",
+					Usage: "Print verbose output",
+				},
+			},
+		},
 	}
 	err := app.Run(os.Args)
 	if err != nil {
