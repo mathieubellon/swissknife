@@ -29,12 +29,21 @@ var competitors = []Competitor{
 }
 
 func vscode(Ctx *cli.Context) error {
-	err := godotenv.Load()
-	if err != nil {
-		log.Fatal("Error loading .env file")
+
+	// Load environment variables from .env file if available (for local development)
+	if _, err := os.Stat(".env"); err == nil {
+		err := godotenv.Load()
+		if err != nil {
+			log.Fatal("Error loading .env file")
+		}
 	}
+
 	SUPABASE_API_URL := os.Getenv("SUPABASE_API_URL")
 	SUPABASE_API_KEY := os.Getenv("SUPABASE_API_KEY")
+
+	if SUPABASE_API_URL == "" || SUPABASE_API_KEY == "" {
+		log.Fatal("SUPABASE_API_URL and SUPABASE_API_KEY must be set in .env file or environment variables")
+	}
 
 	client, err := supabase.NewClient(SUPABASE_API_URL, SUPABASE_API_KEY, &supabase.ClientOptions{})
 	if err != nil {
