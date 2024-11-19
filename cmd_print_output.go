@@ -12,6 +12,9 @@ import (
 	"gopkg.in/yaml.v3"
 )
 
+const ChangelogPath = "pkg-tokenscanner/tokenscanner/data/DETECTORS_CHANGELOG.json"
+const DetectorPath = "pkg-tokenscanner/tokenscanner/config/detectors"
+
 type Release struct {
 	ReleaseDate       time.Time         `json:"release_date"`
 	AddedDetectors    AddedDetectors    `json:"added_detectors"`
@@ -43,7 +46,7 @@ func printOutput(Ctx *cli.Context) error {
 		basepath = GitGuardianBasePath
 	}
 
-	filePath := fmt.Sprintf("%s/tokenscanner/data/DETECTORS_CHANGELOG.json", repo)
+	filePath := fmt.Sprintf("%s/%s", repo, ChangelogPath)
 	fileContent, err := os.ReadFile(filePath)
 	if err != nil {
 		return fmt.Errorf("error reading file: %w", err)
@@ -121,7 +124,7 @@ func printOutput(Ctx *cli.Context) error {
 }
 
 func findDetectorYAML(directory, detectorName string) (string, error) {
-	dir := fmt.Sprintf("%s/tokenscanner/config/detectors", directory)
+	dir := fmt.Sprintf("%s/%s", directory, DetectorPath)
 	findThisFile := detectorName + ".yaml"
 	var detectorYAML string
 

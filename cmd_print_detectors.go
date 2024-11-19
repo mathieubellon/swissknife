@@ -40,7 +40,7 @@ func printDetectorsList(Ctx *cli.Context) error {
 	basepath := GitGuardianBasePath
 
 	DetectorsList := []Detector{}
-	StartDir := fmt.Sprintf("%s/tokenscanner/config/detectors", repo)
+	StartDir := fmt.Sprintf("%s/pkg-tokenscanner/tokenscanner/data", repo)
 	err := filepath.WalkDir(StartDir, func(path string, d os.DirEntry, err error) error {
 		if err != nil {
 			return err
