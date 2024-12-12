@@ -1,4 +1,3 @@
-
 # 🇨🇭 Swissknife
 
 A little utility tool to manage various tasks
@@ -22,24 +21,20 @@ GLOBAL OPTIONS:
    --version, -v  print the version
 ```
 
-
-
 ## Usage/Examples
 
 Generate markdown for a given detection engine version
 
 ```bash
-swissknife markdown --version 2.115.0
+swissknife changelog --version 2.127.0 --repo ../tokenscanner
 ```
 
 With absolute URL
 
 ```bash
-swissknife markdown --version 2.115.0 --absolute-url
+swissknife changelog --version 2.115.0 --absolute-url
 ```
-
 
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
-
